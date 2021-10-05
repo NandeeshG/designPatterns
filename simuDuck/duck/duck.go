@@ -14,6 +14,13 @@ type Duck struct {
 	Display func()
 }
 
+func (d *Duck) SetFlyBehaviour(f fly.FlyBehaviour) {
+	d.FlyBehaviour = f
+}
+func (d *Duck) SetQuackBehaviour(q quack.QuackBehaviour) {
+	d.QuackBehaviour = q
+}
+
 func (d *Duck) PerformFly() {
 	d.FlyBehaviour.Fly()
 }

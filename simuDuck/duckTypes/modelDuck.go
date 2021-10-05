@@ -8,15 +8,15 @@ import (
 	"github.com/NandeeshG/designPatterns/simuDuck/duck"
 )
 
-type MallardDuck struct {
+type ModelDuck struct {
 	duck.Duck
 }
 
-func (md *MallardDuck) Init() {
-	md.SetFlyBehaviour(&fly.FlyWithWings{})
-	md.SetQuackBehaviour(&quack.QuackNormal{})
+func (md *ModelDuck) Init() {
+	md.SetFlyBehaviour(&fly.FlyNoWay{})
+	md.SetQuackBehaviour(&quack.QuackMute{})
 }
 
-func (md *MallardDuck) Display() {
-	fmt.Println("I am a beautiful mallard duck!")
+func (md *ModelDuck) Display() {
+	fmt.Println("I am a model duck!")
 }

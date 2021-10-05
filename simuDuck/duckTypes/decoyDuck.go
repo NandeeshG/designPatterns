@@ -13,8 +13,8 @@ type DecoyDuck struct {
 }
 
 func (md *DecoyDuck) Init() {
-	md.FlyBehaviour = &fly.FlyNoWay{}
-	md.QuackBehaviour = &quack.QuackMute{}
+	md.SetFlyBehaviour(&fly.FlyNoWay{})
+	md.SetQuackBehaviour(&quack.QuackMute{})
 }
 
 func (md *DecoyDuck) Display() {

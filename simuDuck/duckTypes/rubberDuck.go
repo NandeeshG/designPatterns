@@ -13,8 +13,8 @@ type RubberDuck struct {
 }
 
 func (d *RubberDuck) Init() {
-	d.FlyBehaviour = &fly.FlyNoWay{}
-	d.QuackBehaviour = &quack.QuackSqueak{}
+	d.SetFlyBehaviour(&fly.FlyNoWay{})
+	d.SetQuackBehaviour(&quack.QuackSqueak{})
 }
 
 func (d *RubberDuck) Display() {
