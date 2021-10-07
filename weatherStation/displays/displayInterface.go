@@ -1,4 +1,4 @@
-package observers
+package displays
 
 type DisplayInterface interface {
 	Display()
